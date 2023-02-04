@@ -1,11 +1,11 @@
 import Topbar from "./components/topbar/Topbar";
-import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
 
 function App() {
   return (
     <>
       <Topbar />
-      <Login />
+      <Register />
     </>
   );
 }
