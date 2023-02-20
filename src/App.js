@@ -6,9 +6,11 @@ import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import Register from "./pages/register/Register";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/auth/AuthContext";
 
 function App() {
-  const user = true;
+  const {user} = useContext(AuthContext);
   return (
     <Router>
       {user ? <Topbar /> : true}
