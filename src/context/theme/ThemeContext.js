@@ -8,14 +8,14 @@ const INITIAL_STATE = {
 export const ThemeContext = createContext(INITIAL_STATE);
 
 export const ThemeContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(ThemeReducer, INITIAL_STATE);
+  const [state, Dispatch] = useReducer(ThemeReducer, INITIAL_STATE);
 
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(state.isDark));
   }, [state.isDark]);
 
   return (
-    <ThemeContext.Provider value={{ isDark: state.isDark, dispatch }}>
+    <ThemeContext.Provider value={{ isDark: state.isDark, Dispatch }}>
       {children}
     </ThemeContext.Provider>
   );

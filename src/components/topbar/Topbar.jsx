@@ -1,14 +1,25 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth/AuthContext";
+import { ThemeContext } from "../../context/theme/ThemeContext";
 import "./topbar.css";
 
-export default function Topbar() {
+export default function Topbar({ setIsThemeDark }) {
   const {user, dispatch} = useContext(AuthContext);
   const PF = "http://localhost:8800/images/";
+  const { isDark, Dispatch } = useContext(ThemeContext);
 
   const handleLogout = () => {
     dispatch({type:"LOGOUT"});
+  }
+
+  const handleTheme = async () => {
+    try {
+      await Dispatch({ type: "CHANGE_THEME", payload: isDark ? false : true });
+      await setIsThemeDark(isDark ? false : true);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
@@ -67,6 +78,9 @@ export default function Topbar() {
           </ul>
         )}
         <i className="topSearchIcon fas fa-search"></i>
+        <div className="theme" onClick={handleTheme}>
+          {isDark ? <i class="topSearchIcon fa-solid fa-sun"></i> : <i class="topSearchIcon fa-solid fa-moon"></i>}
+        </div>
       </div>
     </div>
   );
