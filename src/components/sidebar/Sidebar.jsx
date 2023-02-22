@@ -1,18 +1,18 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useEffect, /* useState */ } from "react";
+/* import { Link } from "react-router-dom"; */
 import { AuthContext } from "../../context/auth/AuthContext";
 import "./sidebar.css";
 
 export default function Sidebar() {
-  const [cats, setCats] = useState([]);
+  /* const [cats, setCats] = useState([]); */
   const { user } = useContext(AuthContext);
   const PF = "http://localhost:8800/images/";
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get("/categories");
-      setCats(res.data);
+      /* const res = */ await axios.get("/categories");
+      /* setCats(res.data); */
     };
     getCats();
   }, []);
@@ -40,7 +40,7 @@ export default function Sidebar() {
           ))}
         </ul>
       </div> */}
-      <div className="sidebarItem">
+      {/* <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">
           <i className="sidebarIcon fab fa-facebook-square"></i>
@@ -48,7 +48,7 @@ export default function Sidebar() {
           <i className="sidebarIcon fab fa-pinterest-square"></i>
           <i className="sidebarIcon fab fa-instagram-square"></i>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

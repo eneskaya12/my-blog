@@ -14,10 +14,9 @@ export default function Topbar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
+        <a href="https://twitter.com/eneskay_"><i className="topIcon fab fa-twitter-square"></i></a>
+        <a href="https://tr.pinterest.com/ensk05/"><i className="topIcon fab fa-pinterest-square"></i></a>
+        <a href="https://www.instagram.com/ensk05/"><i className="topIcon fab fa-instagram-square"></i></a>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -26,7 +25,7 @@ export default function Topbar() {
               HOME
             </Link>
           </li>
-          <li className="topListItem">
+          {/* <li className="topListItem">
             <Link className="link" to="/">
               ABOUT
             </Link>
@@ -35,7 +34,7 @@ export default function Topbar() {
             <Link className="link" to="/">
               CONTACT
             </Link>
-          </li>
+          </li> */}
           <li className="topListItem">
             <Link className="link" to="/write">
               WRITE
