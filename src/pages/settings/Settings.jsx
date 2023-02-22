@@ -1,6 +1,6 @@
 import "./settings.css"
 import Sidebar from "../../components/sidebar/Sidebar"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { AuthContext } from "../../context/auth/AuthContext"
 import axios from "axios";
 
@@ -10,10 +10,22 @@ export default function Settings() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [desc, setDesc] = useState("");
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(AuthContext);
   const PF = "http://localhost:8800/images/";
+
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get("/users/" + user._id);
+      setUsername(res.data.username);
+      setEmail(res.data.email);
+      setPassword(res.data.password);
+      setDesc(res.data.desc);
+    };
+    getPost();
+  }, [user._id]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,7 +34,8 @@ export default function Settings() {
       userId: user._id,
       username,
       email,
-      password
+      password,
+      desc
     };
 
     if(file){
@@ -78,11 +91,13 @@ export default function Settings() {
             <input type="file" id="fileInput" style={{display:"none"}} onChange={(e) => setFile(e.target.files[0])}/>
           </div>
           <label>Username</label>
-          <input type="text" placeholder={user.username} onChange={(e) => setUsername(e.target.value)}/>
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
           <label>Email</label>
-          <input type="email" placeholder={user.email} onChange={(e) => setEmail(e.target.value)}/>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
           <label>Password</label>
           <input type="password" onChange={(e) => setPassword(e.target.value)}/>
+          <label>Description</label>
+          <input type="text" value={desc} onChange={(e) => setDesc(e.target.value)}/>
           <button className="settingsSubmit" type="submit">Update</button>
           {
             success && <span style={{color:"green", textAlign:"center", marginTop:"20px"}}>Profile has been updated...</span>

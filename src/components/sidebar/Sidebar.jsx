@@ -1,5 +1,5 @@
-import axios from "axios";
-import { useContext, useEffect, /* useState */ } from "react";
+/* import axios from "axios"; */
+import { useContext, /* useEffect, */ /* useState */ } from "react";
 /* import { Link } from "react-router-dom"; */
 import { AuthContext } from "../../context/auth/AuthContext";
 import "./sidebar.css";
@@ -9,13 +9,13 @@ export default function Sidebar() {
   const { user } = useContext(AuthContext);
   const PF = "http://localhost:8800/images/";
 
-  useEffect(() => {
+  /* useEffect(() => {
     const getCats = async () => {
-      /* const res = */ await axios.get("/categories");
-      /* setCats(res.data); */
+      const res = await axios.get("/categories");
+      setCats(res.data);
     };
     getCats();
-  }, []);
+  }, []); */
 
   return (
     <div className="sidebar">
@@ -26,8 +26,7 @@ export default function Sidebar() {
           alt=""
         />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          varius gravida tellus ac sollicitudin.
+          {user.desc}
         </p>
       </div>
       {/* <div className="sidebarItem">
