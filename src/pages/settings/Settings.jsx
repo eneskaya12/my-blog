@@ -59,7 +59,7 @@ export default function Settings() {
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <div className="settingsPP">
-            <img src={file ? URL.createObjectURL(file) : PF + user.profilePicture} alt=""/>
+            <img src={file ? URL.createObjectURL(file) : user.profilePicture ? PF + user.profilePicture : PF + "noAvatar.png"} alt=""/>
             <label htmlFor="fileInput">
               <i className="settingsPPIcon far fa-user-circle"></i>
             </label>

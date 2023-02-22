@@ -1,10 +1,13 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/auth/AuthContext";
 import "./sidebar.css";
 
 export default function Sidebar() {
   const [cats, setCats] = useState([]);
+  const { user } = useContext(AuthContext);
+  const PF = "http://localhost:8800/images/";
 
   useEffect(() => {
     const getCats = async () => {
@@ -19,7 +22,7 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdUtb_N_bj04YdApVfv00WaakO8-c4t7HuA&usqp=CAU"
+          src={user.profilePicture ? PF + user.profilePicture : PF + "noAvatar.png"}
           alt=""
         />
         <p>
@@ -27,7 +30,7 @@ export default function Sidebar() {
           varius gravida tellus ac sollicitudin.
         </p>
       </div>
-      <div className="sidebarItem">
+      {/* <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           {cats.map(c => (
@@ -36,7 +39,7 @@ export default function Sidebar() {
             </Link>
           ))}
         </ul>
-      </div>
+      </div> */}
       <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">

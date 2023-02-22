@@ -49,7 +49,7 @@ export default function Topbar() {
           <Link to="/settings">
             <img
               className="topImg"
-              src={PF + user.profilePicture}
+              src={user.profilePicture ? PF + user.profilePicture : PF + "noAvatar.png"}
               alt=""
             />
           </Link>
