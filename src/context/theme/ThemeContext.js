@@ -1,5 +1,5 @@
 import { createContext, useEffect, useReducer } from "react";
-import { ThemeReducer } from "./ThemeReducer";
+import ThemeReducer from "./ThemeReducer";
 
 const INITIAL_STATE = {
   isDark: JSON.parse(localStorage.getItem("theme")) || false,
