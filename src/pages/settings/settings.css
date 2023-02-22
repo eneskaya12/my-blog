@@ -1,5 +1,6 @@
 .settings{
     display: flex;
+    background-color: var(--bg);
 }
 
 .settingsWrapper{
@@ -59,6 +60,7 @@
 .settingsForm > label{
     font-size: 30px;
     margin-top: 20px;
+    color: var(--text);
 }
 
 .settingsForm > input{
@@ -68,6 +70,7 @@
     border: none;
     border-bottom: 1px solid lightgray;
     font-size: 20px;
+    background-color: var(--bg);
 }
 
 .settingsSubmit{

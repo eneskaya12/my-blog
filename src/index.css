@@ -1,0 +1,21 @@
+:root {
+    --bg: white;
+    --text: black;
+    --boxShadow: rgba(0, 0, 0, 0.68);
+    --sidebarTitleBorder: #a7a4a4;
+    --singlePostDesc: #666;
+    --topIcon: #444;
+    --input: rgb(77, 77, 77);
+    --headerTitles: #444;
+  }
+  
+  [my-data-theme="dark"] {
+    --bg: #15202B;
+    --text: white;
+    --boxShadow: rgba(255, 255, 255, 0.68);
+    --sidebarTitleBorder: #9c9898;
+    --singlePostDesc: #8b8b8b;
+    --topIcon: #999;
+    --input: rgb(190, 190, 190);
+    --headerTitles: #858585;
+  }

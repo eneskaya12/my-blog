@@ -1,3 +1,4 @@
 .single{
     display: flex;
+    background-color: var(--bg);
 }

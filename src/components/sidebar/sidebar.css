@@ -7,6 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 .sidebarItem{
@@ -23,7 +25,7 @@
     border-bottom: 1px solid #a7a4a4;
     font-family: 'Varela Round', sans-serif;
     font-size: 16px;
-    color: #222;
+    color: var(--text);
     font-weight: 600;
     line-height: 20px;
     text-align: center;
