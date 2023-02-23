@@ -3,10 +3,11 @@
     --text: black;
     --boxShadow: rgba(0, 0, 0, 0.68);
     --sidebarTitleBorder: #a7a4a4;
-    --singlePostDesc: #666;
+    --singlePost: #666;
     --topIcon: #444;
     --input: rgb(77, 77, 77);
-    --headerTitles: #444;
+    --headerTitles: #3E54AC;
+    --bgSidebar: #fffaf4;
   }
   
   [my-data-theme="dark"] {
@@ -14,8 +15,9 @@
     --text: white;
     --boxShadow: rgba(255, 255, 255, 0.68);
     --sidebarTitleBorder: #9c9898;
-    --singlePostDesc: #8b8b8b;
-    --topIcon: #999;
-    --input: rgb(190, 190, 190);
-    --headerTitles: #858585;
+    --singlePost: rgb(190, 190, 190);
+    --topIcon: rgb(218, 218, 218);
+    --input: rgb(210, 210, 210);
+    --headerTitles: #3E54AC;
+    --bgSidebar:#192836;
   }

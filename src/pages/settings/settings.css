@@ -64,7 +64,7 @@
 }
 
 .settingsForm > input{
-    color: rgb(77, 77, 77);
+    color: var(--input);
     margin: 10px 0;
     height: 50px;
     border: none;

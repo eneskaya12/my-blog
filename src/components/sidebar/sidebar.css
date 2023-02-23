@@ -7,8 +7,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--bg);
+    background-color: var(--bgSidebar);
     color: var(--text);
+    height: 70%;
 }
 
 .sidebarItem{

@@ -3,6 +3,10 @@
     margin: 0px 25px 40px 25px;
     background-color: var(--bg);
     color: var(--text);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 12px -9px var(--boxShadow);
+    box-shadow: 0px 0px 16px -9px var(--boxShadow);
+    padding: 25px 10px;
 }
 
 .postImg{
@@ -10,6 +14,7 @@
     height: 280px;
     object-fit: cover;
     border-radius: 7px;
+    margin-bottom: 10px;
 }
 
 .postInfo{
@@ -47,7 +52,7 @@
 .postDesc{
     font-family: 'Varela Round', sans-serif;
     font-size: 14px;
-    color: #444;
+    color: var(--topIcon);
     line-height: 24px;
     margin-top: 15px;
     overflow: hidden;

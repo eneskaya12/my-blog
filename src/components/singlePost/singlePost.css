@@ -1,7 +1,7 @@
 .singlePost{
     flex: 9;
     background-color: var(--bg);
-    color: var(--text);
+    color: var(--singlePost);
 }
 
 .singlePostWrapper{
@@ -32,11 +32,13 @@
     font-size: 32px;
     border: none;
     border-bottom: 1px solid lightgray;
-    color: gray;
+    color: var(--input);
+    background-color: var(--bg);
 }
 
 .singlePostTitleInput:focus{
     outline: none;
+    background-color: var(--bg);
 }
 
 .singlePostEdit{
@@ -67,8 +69,8 @@
 }
 
 .singlePostDesc{
-    color: var(--singlePostDesc);
-    font-size: 20px;
+    color: var(--singlePost);
+    font-size: 23px;
     line-height: 30px;
 }
 
@@ -82,7 +84,7 @@
     width: 100%;
     height: 250px;
     border: none;
-    color: #666;
+    color: var(--input);
     font-size: 20px;
     line-height: 30px;
     resize: none;
