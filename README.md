@@ -1,4 +1,4 @@
-# Blog App
+# myBlog
 
 This is a fullstack blog application named ***myBlog***. In this application,
 - you can login, logout or create an account,
