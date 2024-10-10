@@ -18,7 +18,7 @@ This is a fullstack blog application named ***myBlog***. In this application,
 - REST API
 - MongoDB
 
-You can look over the server side of this app in [here](https://github.com/eneskaya12/blog-app-api).
+You can look over the server side of myBlog in [here](https://github.com/eneskaya12/my-blog-api).
 
 ## Screenshots
 
